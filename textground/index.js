@@ -1,5 +1,5 @@
 $('.ta').on('keydown', e => {
-if (e.key == 'Tab') {
+    if (e.key == 'Tab') {
         e.preventDefault();
         const ta = e.target;
         const start = ta.selectionStart;
