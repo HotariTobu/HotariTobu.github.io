@@ -1,0 +1,10 @@
+/* source-frame */
+
+#source-box {
+    width: 100%;
+    height: 300px;
+}
+
+#source-apply-button {
+    padding: 6px 16px;
+}

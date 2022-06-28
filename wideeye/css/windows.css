@@ -1,0 +1,29 @@
+#windows-frame {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.window-frame {
+    width: fit-content;
+    height: fit-content;
+}
+
+.window-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.window-name {
+    font-size: xx-large;
+}
+
+.window-check-box {
+    padding: 30px;
+}
+
+.window-content {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+
+}

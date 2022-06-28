@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<header>
-		<link rel="stylesheet" type="text/css" href="index.css" />
-		<link rel="stylesheet" type="text/css" href="check-box.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/check-box.css" />
+		<link rel="stylesheet" type="text/css" href="css/windows.css" />
+		<link rel="stylesheet" type="text/css" href="css/options.css" />
+		<link rel="stylesheet" type="text/css" href="css/source.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
-		<script src="index.js" type="text/javascript" defer></script>
+		<script src="js/windows.js" type="text/javascript" defer></script>
+		<script src="js/options.js" type="text/javascript" defer></script>
+		<script src="js/source.js" type="text/javascript" defer></script>
 	</header>
 	<body>
 		<div id="content-frame">
-			<div id="windows-frame">
-				<div class="window-frame">
-					<div class="window-bar">
-						<a class="window-name" href="">NAME</a>
-						<label class="switcher">
-							<input class="window-check-box" type="checkbox" onchange="toggleVisibility('1')">
-							<div class="switcher__indicator"></div>
-						</label>
-					</div>
-					<iframe id="1" class="window-content" frameborder="0" width="1500" height="300" sandbox src="https://ja.wikipedia.org/wiki/"></iframe>
-				</div>
-			</div>
+			<div id="windows-frame"></div>
 
 			<div class="separator"></div>
 
-			<div id="option-frame">
+			<div id="options-frame">
 				<label>
 					Window Size
-					<input id="window-size" type="range" min="100" max="1000" value="800" onchange="applySize()">
+					<input id="window-size" class="options-range" type="range" min="100" max="1000" value="800">
 				</label>
+				<div class="options-separator"></div>
 				<label>
 					Content Size
-					<input id="content-size" type="range" min="100" max="2000" value="1500" onchange="applySize()">
+					<input id="content-size" class="options-range" type="range" min="100" max="2000" value="1500">
 				</label>
+				<div class="options-separator"></div>
 				<label>
 					Aspect Ratio
-					<input id="aspect-ratio" type="range" min="0.5" max="2" value="1" onchange="applyRatio(this.value)">
+					<input id="aspect-ratio" class="options-range" type="range" min="0.5" max="2" value="1">
 				</label>
 			</div>
 
@@ -45,12 +41,10 @@
 				<label>
 					Input URLs
 					<br>
-					<textarea id="source-box" onchange="applyURLs(this.value)">
-						Wikipedia&#009;https://ja.wikipedia.org/wiki/
-					</textarea>
+					<textarea id="source-box">Wikipedia&#009;https://ja.wikipedia.org/wiki/</textarea>
 				</label>
 				<div class="end-frame">
-					<button id="apply-button">Apply</button>
+					<button id="source-apply-button">Apply</button>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#content-frame {
+    width: calc(100% - 60px);
+}
+
+
+.separator {
+    height: 1px;
+    background-color: black;
+    margin: 30px 0px;
+}
+
+.end-frame {
+    display: flex;
+    justify-content: end;
+}
