@@ -12,6 +12,7 @@ body {
 
 .window-frame {
     width: fit-content;
+    height: fit-content;
 }
 
 .window-bar {
