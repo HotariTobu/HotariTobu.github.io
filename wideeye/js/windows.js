@@ -1,7 +1,9 @@
 function reloadContent(id) {
-    document.getElementById(id).contentWindow.location.reload();
+    const windowContent = $(`#${id}`);
+    const url = windowContent.attr("src");
+    windowContent.attr("src", url);
 }
 
 function toggleVisibility(id) {
-    $(`#${id}`).toggle("fast");
+    $(`#${id}`).parent().toggle("fast");
 }

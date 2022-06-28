@@ -44,16 +44,21 @@ const applyURLs = () => {
                             reload
                         </button>
                         <label class="switcher">
-                            <input class="window-check-box" type="checkbox" onchange="toggleVisibility('${id}')">
+                            <input class="window-check-box" type="checkbox" checked="checked" onchange="toggleVisibility('${id}')">
                             <div class="switcher__indicator"></div>
                         </label>
                     </div>
                 </div>
-                <iframe id="${id}" class="window-content" frameborder="0" sandbox src="${row["url"]}"></iframe>
+                <div class="window-content-frame">
+                    <div>
+                        <iframe id="${id}" class="window-content" frameborder="0" sandbox src="${row["url"]}"></iframe>
+                    </div>
+                </div>
             </div>
             `);
         });
-    
+
+        applySize();
         $(".window-frame").show("fast");
     }
 

@@ -3,28 +3,30 @@ const contentSize = $("#content-size");
 const aspectRatio = $("#aspect-ratio");
 
 const applySize = () => {
-    const windowWidth = windowSize.value();
-    const contentWidth = contentSize.value();
+    const windowWidth = windowSize.val();
+    const contentWidth = contentSize.val();
 
-    const scale = contentWidth / windowWidth;
+    const scale = windowWidth / contentWidth;
 
-    const windowContent = $("#window-content");
-    windowContent.css("transform", `scale${scale}`);
-    windowContent.css("width", `${windowWidth}px`);
+    const windowContent = $(".window-content");
+    windowContent.css("transform", `scale(${scale})`);
     windowContent.attr("width", contentWidth.toString());
 
-    applyRatio(aspectRatio.value());
+    windowContent.parent().parent().css("width", `${windowWidth}px`);
+
+    applyRatio();
 }
 
-const applyRatio = e => {
-    const ratio = e.target.value;
+const applyRatio = () => {
+    const ratio = aspectRatio.val()
 
-    const windowHeight = windowSize.value() * ratio;
-    const contentHeight = contentSize.value() * ratio;
+    const windowHeight = windowSize.val() * ratio;
+    const contentHeight = contentSize.val() * ratio;
 
-    const windowContent = $("#window-content");
-    windowContent.css("height", `${windowHeight}px`);
+    const windowContent = $(".window-content");
     windowContent.attr("height", contentHeight.toString());
+
+    windowContent.parent().css("height", `${windowHeight}px`);
 }
 
 windowSize.on("change", applySize);
