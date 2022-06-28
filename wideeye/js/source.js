@@ -53,7 +53,7 @@ const applyURLs = () => {
                 </div>
                 <div class="window-content-frame">
                     <div>
-                        <iframe id="${id}" class="window-content" frameborder="0" sandbox src="${row["url"]}"></iframe>
+                        <iframe id="${id}" class="window-content" frameborder="0" sandbox="allow-scripts" src="${row["url"]}"></iframe>
                     </div>
                 </div>
             </div>
