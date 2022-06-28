@@ -40,9 +40,11 @@ const applyURLs = () => {
                 <div class="window-bar">
                     <a class="window-name" href="${row["url"]}" target="_blank">${row["name"]}</a>
                     <div class="end-frame">
-                        <button class="window-reload-button" onclick="reloadContent('${id}')">
-                            reload
-                        </button>
+                        <div class="window-reload-button" onclick="reloadContent('${id}')">
+                            <svg width="50" height="50" fill="none" viewBox="0 0 9 10">
+                                <path d="M5,3 H8 V0 M9,4 M8,3 A4 4 0 1 0 8,7"/>
+                            </svg>
+                        </div>
                         <label class="switcher">
                             <input class="window-check-box" type="checkbox" checked="checked" onchange="toggleVisibility('${id}')">
                             <div class="switcher__indicator"></div>

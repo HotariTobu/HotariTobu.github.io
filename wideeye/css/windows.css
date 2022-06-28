@@ -16,6 +16,21 @@
 
 .window-name {
     font-size: xx-large;
+    text-decoration: none;
+    color: currentColor;
+}
+
+.window-name:hover {
+    color: #0075FF;
+}
+
+.window-reload-button {
+    cursor: pointer;
+    stroke: #d5d5d5;
+}
+
+.window-reload-button:hover {
+    stroke: #0075FF;
 }
 
 .window-check-box {
