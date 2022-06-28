@@ -72,7 +72,7 @@ function applyURLs(value) {
 					</div>
 					<iframe id="1" class="window-content" frameborder="0" width="1500" height="300" sandbox src="https://ja.wikipedia.org/wiki/"></iframe>
 				</div>
-    `)
+    `);
 }
 
 $("#source-box").on('keydown', e => {
