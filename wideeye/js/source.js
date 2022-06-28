@@ -33,12 +33,14 @@ const applyURLs = () => {
         windowsFrame.empty();
     
         rows.forEach((row, index) => {
+            const name = row["name"];
+            const url = row["url"];
             const id = index.toString();
     
             windowsFrame.append(`
             <div class="window-frame" style="display: none;">
                 <div class="window-bar">
-                    <a class="window-name" href="${row["url"]}" target="_blank">${row["name"]}</a>
+                    <a class="window-name" href="${url}" target="_blank">${name}</a>
                     <div class="end-frame">
                         <div class="window-reload-button" onclick="reloadContent('${id}')">
                             <svg width="50" height="50" fill="none" viewBox="0 0 9 10">
@@ -53,7 +55,7 @@ const applyURLs = () => {
                 </div>
                 <div class="window-content-frame">
                     <div>
-                        <iframe id="${id}" class="window-content" frameborder="0" sandbox="allow-scripts" src="${row["url"]}"></iframe>
+                        <iframe id="${id}" class="window-content" frameborder="0" sandbox="allow-scripts" src="${url}"></iframe>
                     </div>
                 </div>
             </div>
