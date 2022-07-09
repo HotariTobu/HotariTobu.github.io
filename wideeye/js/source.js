@@ -55,15 +55,15 @@ const applyURLs = () => {
                 </div>
                 <div class="window-content-frame">
                     <div>
-                        <iframe id="${id}" class="window-content" frameborder="0" src="${url}"></iframe>
+                        <iframe id="${id}" class="window-content" frameborder="0" src="${url}" onfocus="this.blur()"></iframe>
                     </div>
                 </div>
             </div>
             `);
         });
 
-        applySize();
         $(".window-frame").show("fast");
+        applySize();
     }
 
     const windowFrame = $(".window-frame");

@@ -14,6 +14,10 @@ const applySize = () => {
 
     windowContent.parent().parent().css("width", `${windowWidth}px`);
 
+    const windowName = $(".window-name");
+    const endFrameWidth = windowName.next(".end-frame").width();
+    windowName.css("width", `${windowWidth - endFrameWidth}px`);
+
     applyRatio();
 }
 
