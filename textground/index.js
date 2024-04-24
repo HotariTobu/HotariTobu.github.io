@@ -16,7 +16,12 @@ $('.ta').on('keydown', e => {
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 const mainBox = $('#main-box');
+mainBox.val(localStorage.getItem('textground'))
 mainBox.height(window.outerHeight);
+mainBox.on('input', (e) => {
+    localStorage.setItem('textground', e.target.value);
+});
+
 $('#spread-area').on('inview', async (e, isInView) => {
     spreadAreaIsInView = isInView;
     if (isInView) {
